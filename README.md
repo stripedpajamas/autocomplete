@@ -8,7 +8,7 @@ building a trie out of a wordlist and then using that for autocompletion
 git clone https://github.com/stripedpajamas/autocomplete.git
 cd autcomplete
 npm install
-node .
+node lib
 ```
 
 ## license
