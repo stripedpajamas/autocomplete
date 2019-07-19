@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "babel src --out-dir lib",
+    "dev": "npm run build && node lib",
+    "postinstall": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,13 +14,35 @@
     "url": "git+https://github.com/stripedpajamas/autocomplete.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Peter Squicciarini <stripedpajamas273@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/stripedpajamas/autocomplete/issues"
   },
   "homepage": "https://github.com/stripedpajamas/autocomplete#readme",
   "dependencies": {
-    "diffy": "^2.1.0"
+    "import-jsx": "^2.0.0",
+    "ink": "^2.3.0",
+    "ink-text-input": "^3.2.0",
+    "react": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react",
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": true
+          }
+        }
+      ]
+    ]
   }
 }
