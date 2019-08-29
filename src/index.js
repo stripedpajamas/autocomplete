@@ -1,6 +1,6 @@
 const fs = require('fs')
 const React = require('react')
-const { render, Box } = require('ink')
+const { render } = require('ink')
 const Trie = require('./trie')
 const Autocomplete = require('./ui')
 
